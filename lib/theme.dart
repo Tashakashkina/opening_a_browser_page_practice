@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// светлая и темная темы для переключения по кнопке
+// themes for toggle
 
 final kDarkTheme = ThemeData.dark().copyWith(
   primaryColor: Colors.white,
