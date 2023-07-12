@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
 
-//Для android (Chrome) в AndroidManifest.xml добавлены методы
-//Для IOS (Safari) в Info.plist добавлены методы
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +34,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // кнопка для переключения темы приложения (светлая - темная - системная)
+      //theme button (light, dark, system)
       floatingActionButton: FloatingActionButton(onPressed: () => AdaptiveTheme.of(context).toggleThemeMode(),
       tooltip: 'Сменить тему',
       child: const Icon(Icons.sunny,)),
@@ -48,7 +46,7 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(110, 200, 80, 80),
             child: Wrap(
               children: <Widget>[
-               // Применение url_launcher, переход на страницу в браузере по нажатию кнопки
+               // go to browser
                 ElevatedButton(
                   onPressed: () async {
                     var url = Uri.parse('https://friflex.com');
